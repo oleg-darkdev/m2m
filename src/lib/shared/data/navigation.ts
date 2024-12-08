@@ -1,32 +1,36 @@
 const navigation = [
 	{
-		title: 'O projekcie',
+		title: 'О проекте',
 		link: '#about'
 	},
-	{
-		title: 'Misja',
-		link: '#mission'
-	},
+	// {
+	// 	title: 'Lorem Ipsum',
+	// 	link: '/'
+	// },
+	// {
+	// 	title: 'Lorem Ipsum',
+	// 	link: '/'
+	// },
 	// {
 	// 	title: 'Lorem Ipsum',
 	// 	link: '/'
 	// },
 	{
-		title: 'Lista gier',
-		link: '#boardgames'
+		title: 'Исторические даты',
+		link: '#dates'
 	},
-	// {
-	// 	title: 'Lorem Ipsum',
-	// 	link: '/'
-	// },
 	{
-		title: 'F.A.Q.',
+		title: 'Вопрос / Ответ',
 		link: '#faq'
 	},
-	// {
-	// 	title: 'Lorem Ipsum',
-	// 	link: '/'
-	// }
+	{
+		title: 'Поддержать проект',
+		link: '#donate'
+	},
+	{
+		title: 'В криптовалюте',
+		link: '#donate-crypto'
+	},
 ];
 
 export default navigation;
