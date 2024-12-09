@@ -5,10 +5,10 @@ import Faq from './Faq.svelte';
 import Hero from './Hero.svelte';
 import List from './List.svelte';
 import WebApp from './WebApp.svelte';
-// import Faq from './Faq.svelte';
+import Newspapers from './Newspapers.svelte';
 // import Faq from './Faq.svelte';
 // import Faq from './Faq.svelte';
 // import Faq from './Faq.svelte';
 // import Faq from './Faq.svelte';
 
-export { Header, Faq, Footer, About, Hero, List, WebApp };
+export { Header, Faq, Footer, About, Hero, List, WebApp, Newspapers };

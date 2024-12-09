@@ -1,2 +1,8 @@
-// export { default as PleaseEnterPassword } from './PleaseEnterPassword.svelte';
-// export { default as PleaseEnterPassword } from './PleaseEnterPassword.svelte';
+import FooterNav from './FooterNav.svelte';
+// import Layout from './Layout.svelte';
+// import Layout from './Layout.svelte';
+// import Layout from './Layout.svelte';
+// import Layout from './Layout.svelte';
+// import Layout from './Layout.svelte';
+
+export { FooterNav };

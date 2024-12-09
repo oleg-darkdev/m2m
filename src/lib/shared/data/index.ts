@@ -1,4 +1,6 @@
-import navigationLinks from './navigation';
+import navigationLanding from './navigationLanding';
+import navigationMenu from './navigationMenu';
+
 import socialLinks from './socialLinks';
 import donateLinks from './donateLinks';
 import cryptoLinks from './cryptoLinks';
@@ -9,4 +11,13 @@ import faq from './faq';
 // import navigation from './navigation';
 // import navigation from './navigation';
 
-export { navigationLinks, socialLinks, donateLinks, cryptoLinks, allDates, promoDates, faq };
+export {
+	navigationLanding,
+	navigationMenu,
+	socialLinks,
+	donateLinks,
+	cryptoLinks,
+	allDates,
+	promoDates,
+	faq
+};
