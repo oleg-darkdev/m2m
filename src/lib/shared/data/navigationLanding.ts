@@ -3,21 +3,17 @@ const navigation = [
 		title: 'О проекте',
 		link: '#about'
 	},
-	// {
-	// 	title: 'Lorem Ipsum',
-	// 	link: '/'
-	// },
-	// {
-	// 	title: 'Lorem Ipsum',
-	// 	link: '/'
-	// },
-	// {
-	// 	title: 'Lorem Ipsum',
-	// 	link: '/'
-	// },
+	{
+		title: 'О веб-приложении',
+		link: '#about-app'
+	},
 	{
 		title: 'Исторические даты',
 		link: '#dates'
+	},
+	{
+		title: 'Новостные издания, о нас',
+		link: '#newspapers'
 	},
 	{
 		title: 'Вопрос / Ответ',
@@ -31,6 +27,10 @@ const navigation = [
 		title: 'В криптовалюте',
 		link: '#donate-crypto'
 	},
+	{
+		title: 'Контакт с нами',
+		link: '#contact'
+	}
 ];
 
 export default navigation;
