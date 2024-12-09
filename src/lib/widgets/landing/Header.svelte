@@ -1,158 +1,260 @@
 <script lang="ts">
 	// import {  } from '$shared';
-	import { fade } from 'svelte/transition';
-	import type { NavigationLink } from '$sharedTypes';
+	// import {  } from '$widgets';
+	// import {  } from '$entities';
+	import { navigationMenu } from '$sharedData';
 
-	interface NavigationProps {
-		navigation: NavigationLink[];
-	}
-	let { navigation, boardgamesList }: NavigationProps = $props();
-
-	let showMenu = $state(false);
+	let { showMenu } = $state(false);
 </script>
 
-<div role="banner" class="navbar w-nav">
-	<div class="container-full w-container">
-		<div class="navbar-grid">
+<header class="page-nav-header overflow-hidden">
+	<!-- nav-header-wrap -->
+	<div class="flex w-full justify-between">
+		<div class="nav-header-wrap">
+			<a href="/" target="_blank" class="minim-link w-inline-block fixed left-0 top-0 z-40"
+				><img src="images/logo-header.svg" loading="lazy" width="120" alt="" sizes="120px" /></a
+			>
+			<a href="/" target="_blank" class="ml-32 h-12 w-40"
+				><img src="images/text-logo-light.svg" loading="lazy" alt="" /></a
+			>
+			<!-- <h1 class="simple-nav-header pl-32">Минута в минуту</h1> -->
+		</div>
+
+		<div class="top-navigation">
+			<div class="app-nav-btn" on:click={() => (showMenu = !showMenu)}>
+				{#if showMenu}
+					<div class="div-block-20">
+						<div class="div-block-21"></div>
+						<div class="div-block-21-copy"></div>
+					</div>
+				{:else}
+					<div class="div-block-18">
+						<div class="div-block-19"></div>
+						<div class="div-block-19-copy"></div>
+						<div class="div-block-19-copy-copy"></div>
+					</div>
+				{/if}
+			</div>
 			{#if showMenu}
-				<div
-					transition:fade
-					class="sm-menu flex h-screen flex-col"
-					onclick={() => (showMenu = !showMenu)}
-				>
-					<div class="my-auto flex flex-col text-center">
-						{#each navigation as { title, link }}<a
-								href={link}
-								aria-current="page"
-								class="w-nav-link text-white"><h2>{title}</h2></a
-							>{/each}
-						<!-- <a href="/" class="button-link">more about us</a> -->
-					</div>
-					<!-- <div class="footer-item px-10">
-					<div class="footer-title-wrap">
-						<img src="/images/boardgames-icon.svg" loading="lazy" alt="" class="footer-shape-1" />
-						<h6 class="footer-title">Lista gier</h6>
-					</div>
-					<div class="w-layout-grid grid-footer-menu ">
-						{#each boardgamesList as { title, progress, linkLanding, icon }}
-							<a href={progress.landing ? linkLanding : '#'} target="_blank" class="footer-link">
-								<img src={icon} class="h-8" alt={title} />
-								{title}
-							</a>
+				<div class="app-nav-menu">
+					<div class="app-menu-link-wrap">
+						{#each navigationMenu as { title, link }}
+							<a href={link} target="_blank" class="app-menu-link">{title}</a>
 						{/each}
 					</div>
-				</div> -->
 				</div>
 			{/if}
-
-			<div class="nav-left">
-				<nav class="nav-menu w-nav-menu">
-					<!-- w--current -->
-					{#each navigation as { title, link }}
-						<a href={link} aria-current="page" class="nav-link w-nav-link">{title}</a>
-					{/each}
-					<!-- <div class="w-dropdown">
-
-<div class="dropdown-toggle nav-link w-dropdown-toggle">
-
-<div>Pages</div>
-
-<div class="dropdown-icon w-icon-dropdown-toggle"></div>
-
-</div>
-
-<nav class="dropdown-list w-dropdown-list">
-
-<a href="/" aria-current="page" class="dropdown-link w-dropdown-link">Home</a>
-
-</nav>
-                    </div> -->
-				</nav>
-			</div>
-
-			<div class="nav-menu-wrap">
-				<a href="/" class="button-primary-2 nav-button w-inline-block">
-					<div>Contact</div>
-					<img src="/images/arrow-icon-left.svg" loading="lazy" alt="" />
-				</a>
-			</div>
-
-			<a href="/" aria-current="page" class="brand w-nav-brand w--current">
-				<img
-					src="/images/logos/puzzle_management.svg"
-					loading="lazy"
-					alt="Logo"
-					class="logo lg:h-[360px]"
-				/>
-			</a>
-
-			<div
-				class="menu-button w-nav-button {showMenu
-					? 'w--open rotate-45'
-					: ''} transition delay-150 duration-300 ease-in-out"
-				onclick={() => (showMenu = !showMenu)}
-			>
-				<!-- <div class="w-icon-nav-menu"></div> -->
-				<!-- <h4 class='my-auto'>=</h4> -->
-				<img src="/images/menu-icon.svg" class="h-10 w-auto" alt="" />
-			</div>
 		</div>
 	</div>
-</div>
+</header>
 
 <style lang="postcss">
-	@media screen and (min-width: 991px) {
-		.sm-menu,
-		.w-nav-button {
-			display: none;
+	.top-navigation {
+		z-index: 20;
+		position: static;
+	}
+	.page-nav-header {
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		right: 0%;
+		bottom: auto;
+		z-index: 10;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100vw;
+		height: 13vh;
+		padding-right: 2.4rem;
+		padding-left: 2.4rem;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-bottom: 1px solid #313131;
+		background-color: #000;
+	}
+
+	.nav-header-wrap {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		/* width: 100vw; */
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.app-menu-link {
+		color: var(--mid-gray);
+		margin-bottom: 20px;
+		font-size: 2rem;
+		transition:
+			transform 0.2s,
+			opacity 0.2s;
+	}
+
+	.app-menu-link:hover {
+		color: var(--white);
+		transform: scale(1.05);
+	}
+
+	.app-menu-link-wrap {
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		display: flex;
+	}
+
+	.app-nav-menu {
+		z-index: 98;
+		background-color: #000;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		width: 50vw;
+		height: 100vh;
+		padding-left: 7%;
+		padding-right: 7%;
+		display: flex;
+		position: fixed;
+		top: 0%;
+		bottom: 0%;
+		left: auto;
+		right: 0%;
+	}
+	.div-block-21 {
+		background-color: #fff;
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		transform: rotate(0);
+	}
+	.div-block-21-copy {
+		background-color: #fff;
+		width: 3px;
+		height: 100%;
+		position: absolute;
+		transform: rotate(0);
+	}
+
+	.div-block-19-copy-copy {
+		background-color: #fff;
+		width: 100%;
+		height: 3px;
+		position: relative;
+	}
+
+	.div-block-19-copy {
+		background-color: #fff;
+		width: 65%;
+		height: 3px;
+		position: relative;
+	}
+
+	.div-block-18 {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+		display: flex;
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+	}
+
+	.div-block-19 {
+		background-color: #fff;
+		width: 35%;
+		height: 3px;
+		position: relative;
+	}
+
+	.div-block-20 {
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		height: auto;
+		display: flex;
+		position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		transform: rotate(45deg);
+	}
+	.app-nav-btn {
+		z-index: 99;
+		cursor: pointer;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		transition: transform 0.2s;
+		display: flex;
+		position: relative;
+	}
+
+	.app-nav-btn:hover {
+		transform: scale(0.9);
+	}
+
+	@media screen and (max-width: 991px) {
+		.app-nav-btn {
+			width: 25px;
+			height: 25px;
+		}
+		.app-nav-menu {
+			width: 65vw;
 		}
 	}
-	@media screen and (max-width: 991px) {
-		.w-nav-button {
-			float: right;
-			cursor: pointer;
-			-webkit-tap-highlight-color: #0000;
-			tap-highlight-color: #0000;
-			-webkit-user-select: none;
-			user-select: none;
-			padding: 18px;
-			font-size: 24px;
-			/* display: none; */
-			position: relative;
-			color: #fff;
-			background-color: #c8c8c8;
+
+	@media screen and (max-width: 767px) {
+		.app-nav-btn {
+			top: 2%;
+			right: 4%;
+		}
+		.app-nav-menu {
+			width: 100vw;
 		}
 
-		.w-nav-button:focus {
-			outline: 0;
+		.app-menu-link {
+			font-size: 2.5rem;
 		}
-
-		.menu-button {
-			border-radius: var(--border-radius--border-radius);
-			background-color: var(--color--primary-1);
-			color: var(--color--black);
-			margin-left: auto;
-		}
-
-		.menu-button.w--open {
-			background-color: var(--color--primary-2);
-			color: var(--color--black);
-		}
-
-		.sm-menu {
-			background: var(--color--gray-2);
-			min-width: 200px;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			overflow: visible;
+		.page-nav-header {
+			height: 72px;
 		}
 	}
 
 	@media screen and (max-width: 479px) {
-		.menu-button {
-			padding: 12px;
+		.app-nav-btn {
+			width: 20px;
+			height: 20px;
+		}
+		.page-nav-header {
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+		.nav-header-wrap {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.app-nav-menu {
+			transform: translate(100%);
 		}
 	}
 </style>
