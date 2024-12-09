@@ -1,91 +1,45 @@
 <script lang="ts">
-	import { boardgamesList, categories } from '$sharedData';
-	import { LineDivider, SmallContaciDivider } from '$sharedUi';
-	import {
-		About,
-		TagsLine,
-		Faq,
-		Features,
-		BoardgamesList,
-		OurMission
-	} from '$widgetsLanding';
+	// import {} from '$sharedData';
+	// import {} from '$sharedUi';
+	// import { } from '$widgetsLanding';
+
+	import { Header, Footer, Faq, WebApp, Hero, List, Newspapers } from '$widgetsLanding';
 	// import { SEO } from '$sharedUtils';
-	// import {
-	// 	LinkinBio,
-	// 	Services,
-	// 	TagsLine,
-	// 	About,
-	// 	Gallery,
-	// 	Stats,
-	// 	Faq,
-	// 	FullWidthBanner,
-	// 	Features,
-	// 	Instructions,
-	// 	PleaseEnterPassword,
-	// 	BestBoardgames,
-	// 	Blog,
-	// 	ColourfulSection,
-	// 	ContactForm,
-	// 	BoardgamesList,
-	// 	Price,
-	// 	Team,
-	// 	FreeFirst,
-	// 	OurMission
-	// } from '$widgetsLanding';
+	// import { } from '$widgetsLanding';
 </script>
 
 <svelte:head>
-	<title>Puzzle Management | Home </title>
+	<title>Минута в минуту | Home</title>
 	<meta name="description" content="" />
 </svelte:head>
 
 <!-- <SEO title="Home" /> -->
 
-<TagsLine />
+<div class="" style='overflow: hidden;'>
+	<Header />
 
-<About {categories}/>
+	<!-- горизонтальная полоса прокрутки в каждом блоке -->
+	<Hero />
 
-<!-- <Stats /> -->
+	<List />
 
-<LineDivider />
+	<WebApp />
 
-<OurMission />
+	<Newspapers />
 
-<LineDivider />
+	<Faq />
 
-<Features {categories}/>
+	<div class="page-hero-section">
+		<div class="hero-info-wrap">
+			<div class="page-hero-tag white">A REaL SWELL</div>
+			<h1 class="large-page-heading outline">Footer</h1>
+		</div>
+		<div class="text-block">scroll down</div>
+	</div>
 
-<SmallContaciDivider />
-
-<!-- <LineDivider /> -->
-
-<BoardgamesList {categories} />
-
-<!-- <ColourfulSection /> -->
-<!-- <BestBoardgames /> -->
-<!-- <Gallery /> -->
-<!-- <BestBoardgames /> -->
-<!-- <Price /> -->
-<!-- <BigContaciDivider /> -->
-<!-- <Services /> -->
-<LineDivider />
-
-<Faq />
-
-<!-- <Team /> -->
-
-<!-- <FreeFirst /> -->
-
-<!-- <FullWidthBanner /> -->
-
-<!-- <ContactForm /> -->
-
-<!-- <Instructions /> -->
-
-<!-- <PleaseEnterPassword /> -->
-
-<!-- <LinkinBio /> -->
-
+	<Footer />
+</div>
 
 <style lang="postcss">
+	
 </style>
