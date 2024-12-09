@@ -3,17 +3,18 @@
 	// import {  } from '$widgets';
 	// import {  } from '$entities'
 
-	let { faqItem } = $props();
+	let { faqItem } = $props(),
+		showAnswer = $state(false);
 </script>
 
-<div class="small-accordion-item">
+<div class="small-accordion-item" on:click={() => (showAnswer = !showAnswer)}>
 	<div class="accordion-tab-button-dark">
 		<!-- {faqItem.icon} -->
-		<img src="images/icons/person.svg" loading="lazy" width="20" alt="" class="accordion-icon" />
-		<h1 class="small-accordion-header with-icon">{faqItem.a}</h1>
+		<img src="images/icons/{faqItem.icon}" loading="lazy" width="20" alt="" class="accordion-icon" />
+		<h1 class="small-accordion-header with-icon">{faqItem.q}</h1>
 		<div class="accordion-arrow-wrap">
 			<img
-				src="images/icons/chevron-down.svg"
+				src="images/icons/{showAnswer ? 'chevron-up.svg' : 'chevron-down.svg'}"
 				loading="lazy"
 				alt=""
 				class="simple-accordion-arrow"
@@ -21,11 +22,15 @@
 		</div>
 	</div>
 
-	<div class="small-accordion-pane">
-		<div class="accordion-pane-content">
-			<div class="small-accordion-text">{faqItem.q}</div>
+	{#if showAnswer}
+		<div class="small-accordion-pane">
+			<div class="accordion-pane-content">
+				{#each faqItem.a as aswer}
+					<div class="small-accordion-text">{aswer}</div>
+				{/each}
+			</div>
 		</div>
-	</div>
+	{/if}
 </div>
 
 <style lang="postcss">
