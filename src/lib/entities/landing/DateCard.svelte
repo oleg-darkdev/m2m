@@ -1,7 +1,7 @@
 <script lang="ts">
 	// import {  } from '$shared';
 	// import {  } from '$widgets';
-	// import {  } from '$entities';
+	import { ImgCard } from '$sharedUi';
 
 	let { date } = $props(),
 		showInfo = $state(false);
@@ -69,50 +69,29 @@
 								{desc}
 							</p>
 						{/each}
-
-						<div class="case-studies-section mt-10">
-							<!-- <div data-w-id="36812a3d-9122-a1b0-05a9-0f4b6e6a98ae" class="section-header-wrap">
-								<h3 class="scroll-section-header">Horizontal Scroll</h3>
-								<div class="section-subtitle">w/ SHOWS�&nbsp;THAT BLOW�&nbsp;MINDS</div>
-								<div class="scroll-text-message">
-									<div>keep scrolling</div>
-									<div
-										class="button-icon pad-left"
-										data-w-id="36812a3d-9122-a1b0-05a9-0f4b6e6a98b6"
-										data-animation-type="lottie"
-										data-src="https://cdn.prod.website-files.com/635a955f0d9907b95efb37c4/6373c73e5fc0b2452a3d6183_Scroll%20Down%20Lottie%201.json"
-										data-loop="1"
-										data-direction="1"
-										data-autoplay="1"
-										data-is-ix2-target="0"
-										data-renderer="svg"
-										data-default-duration="3.04"
-										data-duration="0"
-									></div>
+						<div class="scroll-section-wrapper">
+							<!-- <div class="header-wrapper less-top-padding">
+								<div class="header-column-left">
+								<div class="header-text-wrap">
+									<h1 class="header outline">Events <br>
+									</h1>
+									<h1 data-w-id="890f36ef-b0a7-4584-ce02-5beff8a0be8c" class="scroll-section-header">Coming Up Next <br>
+									</h1>
+								</div>
+								</div>
+								<div class="header-column-right">
+								<div class="scrolling-top-wrap">
+									<a href="/events" class="scroll-arrow w-inline-block w-clearfix">
+									<div class="scroll-arrow-txt">SEE�&nbsp;ALL</div>
+									<img src="images/656e9994a83a4b2f90ff33d2_arrow-circle-up-right-light.svg" alt="" class="scroll-arrow-img">
+									</a>
+								</div>
 								</div>
 							</div> -->
-							<div class="cards-wrap">
-								<div class="wrapper">
-									<div class="scroll-list">
-										{#each date.gallery as { img, figcaption, alt }}
-											<!-- <div class="scroll-item"> -->
-											<div class="project-card w-inline-block">
-												<img {alt} loading="eager" src="/images/{img}" class="cs-photo" />
-												<div class="project-overlay">
-													<div class="project-content">
-														<h3 class="project-t	title">{figcaption}</h3>
-														<p class="cs-card-category">
-															{figcaption}
-														</p>
-													</div>
-												</div>
-												<!-- </div> -->
-											</div>
-										{/each}
-									</div>
-								</div>
-								<div class="button-wrapper">
-									<!-- <a href={date.telegramLink} target="_blank" class=" mx-4 secondary-button w-button dark"
+							<ImgCard />
+						</div>
+						<div class="button-wrapper">
+							<!-- <a href={date.telegramLink} target="_blank" class=" mx-4 secondary-button w-button dark"
 										>В телеграме </a
 									>
 									<a href="/app" target="_blank" class="mx-4 secondary-button w-button dark"
@@ -121,9 +100,7 @@
 										</a
 									> -->
 
-									<button class="secondary-button w-button dark">Показать все фотографии</button>
-								</div>
-							</div>
+							<button class="secondary-button w-button dark">Показать все фотографии</button>
 						</div>
 					</div>
 				{/if}
