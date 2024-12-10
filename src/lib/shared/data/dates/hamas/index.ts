@@ -42,7 +42,7 @@ const data = {
 	location: '',
 	time: '',
 	app: 0,
-	anchor: ''
+	anchor: 'атака-хамас'
 };
 
 export default data;

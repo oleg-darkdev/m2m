@@ -42,7 +42,7 @@ const data = {
 	location: 'Афганистан',
 	time: '05:30',
 	app: 0,
-	anchor: ''
+	anchor: 'aфганистан'
 };
 
 export default data;

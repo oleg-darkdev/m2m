@@ -42,7 +42,7 @@ const data = {
 	location: 'Российская Федерация',
 	time: '',
 	app: 0,
-	anchor: ''
+	anchor: 'беслан'
 };
 
 export default data;

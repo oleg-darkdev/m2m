@@ -42,7 +42,7 @@ const data = {
 	location: 'Москва',
 	time: '',
 	app: 0,
-	anchor: ''
+	anchor: 'протесты-на-болотной'
 };
 
 export default data;

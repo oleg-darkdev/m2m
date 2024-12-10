@@ -43,7 +43,7 @@ const data = {
 	location: 'Будёновск',
 	time: '',
 	app: 0,
-	anchor: ''
+	anchor: 'теракт-в-буденновске'
 };
 
 export default data;
