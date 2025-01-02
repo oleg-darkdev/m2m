@@ -1,8 +1,4 @@
 <script lang="ts">
-	// import {} from '$sharedData';
-	// import {} from '$sharedUi';
-	import { List } from '$widgetsLanding';
-	// import { SEO } from '$sharedUtils';
 	import { FooterNav } from '$entitiesApp';
 </script>
 
@@ -13,11 +9,9 @@
 
 <!-- <SEO title="Home" /> -->
 
-<List />
+<!-- <List /> -->
 
 <FooterNav />
 
-
 <style lang="postcss">
-	
 </style>

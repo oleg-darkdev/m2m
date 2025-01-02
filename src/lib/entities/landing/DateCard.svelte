@@ -248,7 +248,7 @@
 	}
 
 	.heading-2 {
-		background-image: url('../images/63b33a8bc0ffbd7b41e7d4fe_dmitry-schemelev-OEnKKXvdbDU-unsplash.jpg');
+		/* background-image: url(''); */
 		background-position: 0px 0px;
 		background-size: cover;
 		font-size: 8rem;
