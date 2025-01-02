@@ -3,25 +3,23 @@
 	// import {  } from '$widgets';
 	// import {  } from '$entities';
 
-
-
 	export let actualScreen = 0;
 </script>
 
 <footer class="app-navigation">
-	<button on:click={()=> actualScreen = 0} class="app-nav-link w-inline-block">
+	<button onclick={() => (actualScreen = 0)} class="app-nav-link w-inline-block">
 		<img src="images/icons/search.svg" alt="" class="footer-nav-icon" />
 		<div class="footer-nav-text">Search</div>
 	</button>
-	<button on:click={()=>  actualScreen = 1} class="app-nav-link w-inline-block">
+	<button onclick={() => (actualScreen = 1)} class="app-nav-link w-inline-block">
 		<img src="images/icons/search.svg" alt="" class="footer-nav-icon" />
 		<div class="footer-nav-text">Search</div>
 	</button>
-	<button on:click={()=>  actualScreen = 2} class="app-nav-link w-inline-block">
+	<button onclick={() => (actualScreen = 2)} class="app-nav-link w-inline-block">
 		<img src="images/icons/search.svg" alt="" class="footer-nav-icon" />
 		<div class="footer-nav-text">Search</div>
 	</button>
-	<button on:click={()=>  actualScreen = 3} class="app-nav-link w-inline-block">
+	<button onclick={() => (actualScreen = 3)} class="app-nav-link w-inline-block">
 		<img src="images/icons/search.svg" alt="" class="footer-nav-icon" />
 		<div class="footer-nav-text">Search</div>
 	</button>

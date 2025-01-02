@@ -24,7 +24,7 @@
 
 <button
 	class="long-button w-inline-block"
-	on:click={() => {
+	onclick={() => {
 		copyToClipboard(link.shortUrl);
 		copiedInfo = !copiedInfo;
 		setTimeout(() => {
@@ -47,5 +47,4 @@
 </button>
 
 <style lang="postcss">
-	
 </style>

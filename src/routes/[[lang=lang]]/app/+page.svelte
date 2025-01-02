@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FooterNav } from '$entitiesApp';
+	// import { FooterNav } from '$entitiesApp';
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 
 <!-- <List /> -->
 
-<FooterNav />
+<!-- <FooterNav /> -->
 
 <style lang="postcss">
 </style>

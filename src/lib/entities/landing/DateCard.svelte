@@ -50,7 +50,7 @@
 					>
 
 					<button
-						on:click={() => (showInfo = !showInfo)}
+						onclick={() => (showInfo = !showInfo)}
 						class="event-ticket-button-2 w-button mb-10 mt-10"
 						>Подробнее <img
 							src="images/icons/chevron-down.svg"

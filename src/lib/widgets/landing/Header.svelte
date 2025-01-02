@@ -12,17 +12,17 @@
 	<div class="flex w-full justify-between">
 		<div class="nav-header-wrap">
 			<a href="/" target="_blank" class="minim-link w-inline-block fixed left-0 top-0 z-40"
-				><img src="images/logo-header.svg" loading="lazy"  class=' lg:h-40 lg:w-40 w-20 h-20'/></a
+				><img src="images/logo-header.svg" loading="lazy" class=" h-20 w-20 lg:h-40 lg:w-40" /></a
 			>
 			<!-- width="120" alt="" sizes="120px" -->
-			<a href="/" target="_blank" class="lg:ml-32 md:ml-32 ml-20 h-12 w-40 "
+			<a href="/" target="_blank" class="ml-20 h-12 w-40 md:ml-32 lg:ml-32"
 				><img src="images/text-logo-light.svg" loading="lazy" alt="" /></a
 			>
 			<!-- <h1 class="simple-nav-header pl-32">Минута в минуту</h1> -->
 		</div>
 
 		<!-- <div class="top-navigation">
-			<div class="app-nav-btn" on:click={() => (showMenu = !showMenu)}>
+			<div class="app-nav-btn" onclick={() => (showMenu = !showMenu)}>
 				{#if showMenu}
 					<div class="div-block-20">
 						<div class="div-block-21"></div>
